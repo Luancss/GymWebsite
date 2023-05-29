@@ -14,45 +14,95 @@
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+    <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+
   </head>
   <body>
     <header class="header" data-header>
       <div class="container">
         <a href="#" class="logo">
           <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon
-          ><span class="span">Fitlife</span></a>
+          ><span class="span">Fitlife</span></a
+        >
 
-          <nav class="navbar" data-navbar>
-            <button class="nav-close-btn" aria-label="close-menu" data-nav-toggler=""> <ion-icon name="close-sharp" aria-hidden="true"></ion-icon></button>
-
-            <ul class="navbar-list">
-              <li>
-                <a href="#home" class="navbar-link active" data-nav-link>Início</a>
-              </li>
-              <li>
-                <a href="#about" class="navbar-link" data-nav-link>Sobre</a>
-              </li>
-              <li>
-                <a href="#class" class="navbar-link" data-nav-link>Aulas</a>
-              </li>
-              <li>
-                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-              </li>
-              <li>
-                <a href="#contact" class="navbar-link" data-nav-link>Contato</a>
-              </li>
-            </ul>
-          </nav>
-
-          <a href="#" class="btn btn-secundary">Entrar</a>
-
-          <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="close-menu"
+            data-nav-toggler=""
+          >
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
           </button>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link active" data-nav-link
+                >Início</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>Sobre</a>
+            </li>
+            <li>
+              <a href="#class" class="navbar-link" data-nav-link>Aulas</a>
+            </li>
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn btn-secundary">Entrar</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
       </div>
     </header>
+
+    <main>
+      <article>
+        <section
+          class="section hero bg-dark has-after has-bg-image"
+          id="home"
+          aria-label="hero"
+          data-section
+          style="background-image: url('./assets/images/hero-bg.png')">
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <strong class="strong">O melhor</strong>Clube fitness
+              </p>
+              <h1 class="h1 hero-title">
+                Trabalhe Duro Por Uma Vida Melhor
+              </h1>
+              <p class="section-text">Supere-se a cada dia e transforme seu corpo em uma obra-prima. Seja a motivação que precisa para alcançar seus objetivos fitness.</p>
+              <a href="#" class="btn btn-primary">Começar</a>
+            </div>
+
+            <div class="hero-banner">
+              <img src="./assets/images/hero-banner.png"width="660" height="753" alt="hero banner">
+              <img src="./assets/images/about-circle-one.png" width="666" height="666" aria-hidden="true" alt="" class="circle circle-1">
+              <img src="./assets/images/about-circle-two.png" width="666" height="666" aria-hidden="true" alt="" class="circle circle-2">
+
+              <img src="./assets/images/heart-rate.svg" width="255" height="270" alt="heart rate" class="abs-img abs-img-1">
+              <img src="./assets/images/calories.svg" width="348" height="224" alt="heart rate" class="abs-img abs-img-2">
+            </div>
+          </div>
+        </section>
+
+        
+      </article>
+    </main>
 
     <script src="./assets/js/script.js"></script>
     <script
