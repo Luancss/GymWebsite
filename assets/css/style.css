@@ -272,10 +272,57 @@ body{
   color: var(--coquelicot);
 }
 
+.text-center {
+  text-align: center;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-content .section-subtitle {
     color: rgb(236, 63, 11);
     background-color: rgb(247, 211, 205);
 }
+
+.has-scrollbar {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding-block-end: 30px;
+  scroll-snap-type: inline mandatory;
+}
+
+.scrollbar-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track,
+.has-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--coquelicot);
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: calc(25% - 25px);
+}
+
 
 .navbar,
 .header .btn{
@@ -622,6 +669,87 @@ body{
   100% {
     box-shadow: 0 0 0 40px transparent;
   }
+}
+
+.class {
+  padding-block-start: calc(var(--section-padding) + 250px);
+}
+
+.class .section-subtitle {
+  margin-inline: auto;
+  color: var(--coquelicot);
+  background-color: rgba(241, 107, 53, 0.144);
+}
+
+.class .section-title {
+  color: var(--white);
+}
+
+.class-card {
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  height: 100%;
+  overflow: hidden;
+}
+
+.class-card .card-banner img {
+  transition: var(--transition-2);
+}
+
+.class-card:is(:hover, :focus-within) .card-banner img {
+  transform: scale(1.1);
+}
+
+.class-card .card-content {
+  padding: 24px;
+}
+
+.class-card .title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.class-card .title-icon {
+  padding-inline-end: 20px;
+  margin-inline-end: 20px;
+  min-width: max-content;
+  border-inline-end: 1x solid var(--gainsboro);
+}
+
+.class-card .card-title {
+  transition: var(--transition-1);
+}
+
+.class-card .card-title:is(:hover, :focus) {
+  color: var(--coquelicot);
+}
+
+.class-card .card-text {
+  color: var(--sonic-silver);
+  font-style: var(--fs-6);
+  margin-block: 16px 12px;
+}
+
+.class-card .progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ff-catamaran);
+  color: var(--rich-black-fogra-29-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-800);
+  margin-block-end: 8px;
+}
+
+.class-card .progress-bg {
+  background-color: var(--coquelicot_10);
+  border-radius: 50px;
+}
+
+.class-card .progress-bar {
+  background-color: var(--coquelicot);
+  height: 10px;
+  border-radius: inherit;
 }
 
 
