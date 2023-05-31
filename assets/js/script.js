@@ -1,4 +1,4 @@
-// Adicionando evento no elemento
+// Add event on element
 
 const addEventOnElem = function(elem, type, callback) {
   if (elem.length > 1) {
@@ -27,3 +27,18 @@ const closeNavbar = function () {
 }
 
 addEventOnElem(navLinks, "click", closeNavbar);
+
+// Header & back top btn active
+
+const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  if(window.scrollY >= 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
+});
